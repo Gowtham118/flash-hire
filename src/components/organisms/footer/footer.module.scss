@@ -1,0 +1,158 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.footer {
+    padding: 148px 200px;
+    background: #F3F4F4;
+
+    display: flex;
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35%;
+        height: 20rem;
+
+        @media screen and (max-width: $bp-medium) {
+            justify-content: stretch;
+            gap: 2rem;
+            height: auto;
+        }
+
+        &__mail {
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+            font-weight: 700;
+            color: black;
+        }
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        font-weight: 500;
+        color: black;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 20rem;
+
+        }
+    }
+
+    &__header {
+        text-decoration: none;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        font-weight: 700;
+        margin-left: 1.2rem;
+    }
+
+    a,
+    a:active,
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: var(--color-text-black-dark);
+    }
+
+    &__reachout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__title {
+            font-size: 4rem;
+            line-height: 5.8rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            color: black;
+
+            @media screen and (max-width: $bp-medium) {
+                font-size: 2.4rem;
+                line-height: 3.5rem;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.4rem;
+            width: 52.4rem;
+            height: 25.2rem;
+
+            &__optional {
+                opacity: 0.7;
+            }
+
+            ::-webkit-input-placeholder {
+                color: #767676;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+
+            :-ms-input-placeholder {
+                color: #767676;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+
+            ::placeholder {
+                color: #767676;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+
+            label {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                font-weight: 400;
+                color: -var(--color-black);
+                margin-left: .5rem;
+            }
+
+            input,
+            textarea {
+                width: 25rem;
+                height: 4.8rem;
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+                margin-top: 0.4rem;
+                padding: 1.6rem !important;
+                color: -var(--color-text-black-dark);
+                background: white;
+                padding: 0.4rem;
+                border-radius: 0.4rem;
+                outline: none;
+                border: none;
+            }
+
+            textarea {
+                width: 52.4rem;
+                height: 6rem;
+                margin-top: 1.2rem;
+                font-family: inherit;
+                font-size: inherit;
+            }
+        }
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding: 40px 20px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+}
+
+.primaryButton {
+    @include primary-button;
+}

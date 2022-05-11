@@ -1,0 +1,53 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.how_it_works {
+    padding: 24px 200px;
+    margin-top: 10rem;
+
+    &__title {
+
+        @include bold-text;
+
+        display: flex;
+        justify-content: space-between;
+        color: var(--color-black);
+
+        &__blue {
+            color: var(--color-primary);
+        }
+
+        &__black {
+            color: var(--color-black);
+        }
+
+        &__description {
+            font-size: 2rem;
+            line-height: 3rem;
+            width: 64.2rem;
+            margin-top: 1.6rem;
+            font-weight: 400;
+            color: var(--color-grey-dark);
+
+            @media screen and (max-width: $bp-medium) {
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+                width: 100%;
+            }
+        }
+
+        &__image {
+            margin-top: -4rem;
+            margin-right: 8rem;
+        }
+    }
+
+    @media screen and (max-width: $bp-largest) {
+        margin-top: 10rem;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        margin-top: -2rem;
+        padding: 40px 20px;
+    }
+}

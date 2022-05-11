@@ -1,0 +1,31 @@
+$bp-largest: 91em; // 1440px
+$bp-larger: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+@mixin bold-text {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+    font-weight: 700;
+
+    @media screen and (max-width: $bp-medium) {
+        font-size: 3.4rem;
+        line-height: 4.4rem;
+    }
+}
+
+@mixin primary-button {
+    width: 120px;
+    height: 40px;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    cursor: pointer;
+}

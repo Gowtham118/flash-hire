@@ -1,0 +1,127 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.hero {
+    padding: 2.4rem 20rem;
+    height: 800px;
+
+    @media screen and (max-width: $bp-medium) {
+        padding: 1rem 2.4rem;
+        height: auto;
+    }
+
+    &__background__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        @media screen and (min-width: $bp-largest) {
+            height: 100%;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            background: #111227;
+            height: 80rem;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            height: 92rem;
+
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 13rem;
+
+        &__image {
+            margin-top: -7.4rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 37rem;
+                height: 38.9rem;
+            }
+        }
+
+        &__text {
+            @include bold-text;
+
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            width: 60%;
+            color: var(--color-white);
+            text-align: left;
+            position: relative;
+            z-index: 1;
+
+            &__blue {
+                color: var(--color-primary);
+            }
+
+            &__dottedLogo {
+                width: 5.6rem;
+                height: 9.5rem;
+                position: absolute;
+                top: -6rem;
+                right: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            flex-direction: column-reverse;
+            gap: 4rem;
+        }
+    }
+
+
+}
+
+.nav {
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+
+    &__header {
+        text-decoration: none;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        font-weight: 700;
+        margin-left: 1.2rem;
+        color: (--color-white);
+    }
+
+    &__item {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        gap: 4.8rem;
+
+        .nav__button {
+            margin-left: auto;
+        }
+    }
+
+    a,
+    a:active,
+    a:visited {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    a:hover {
+        color: var(--color-black);
+    }
+
+}

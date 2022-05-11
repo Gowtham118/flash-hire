@@ -1,0 +1,5 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.primaryButton {
+    @include primary-button;
+}

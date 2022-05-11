@@ -1,0 +1,56 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 42.6rem;
+    padding: 2.4rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 1.6rem;
+
+    @media screen and (max-width: $bp-medium) {
+        width: 37.4rem;
+        height: 48rem;
+    }
+
+    @media screen and (min-width:$bp-medium) {
+        &:first-child {
+            flex: 1 1 42.2rem;
+        }
+
+        &:nth-child(2) {
+            flex-direction: column-reverse;
+            flex: 1 1 58.6rem;
+        }
+
+        &:nth-child(3) {
+            flex-direction: column-reverse;
+            flex: 1 1 59rem;
+        }
+
+        &:nth-child(4) {
+            flex: 1 1 40.9rem;
+        }
+    }
+
+    &__content {
+        width: 90%;
+        height: 11.4rem;
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+        font-weight: 500;
+        color: var(--color-black);
+
+        &__strongText {
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 4.6rem;
+        }
+    }
+
+    &__image {
+        width: 24rem;
+        height: 24rem;
+    }
+}

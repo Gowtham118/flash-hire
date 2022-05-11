@@ -1,0 +1,95 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 70px 0px;
+
+    @media screen and (min-width: $bp-medium) {
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 40rem;
+        gap: 1.4rem;
+        color: var(--color-text-black-dark);
+
+        @media screen and (max-width: $bp-medium) {
+            &__image {
+                width: 37.4rem;
+                height: 46.2rem;
+            }
+
+            width: 100%;
+        }
+
+        &__icon {
+            width: 7.8rem;
+            height: 5.4rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 4rem;
+                height: 2.7rem;
+            }
+        }
+
+        &__title {
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 5.8rem;
+
+            @media screen and (max-width: $bp-medium) {
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+            }
+        }
+
+        &__tagline {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            opacity: 50%;
+
+            @media screen and (max-width: $bp-medium) {
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+            }
+        }
+
+        &__description {
+            font-size: 2rem;
+            line-height: 2.92rem;
+
+            @media screen and (max-width: $bp-medium) {
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+            }
+        }
+
+    }
+
+    &__image {
+        width: 51rem;
+        height: 63.2rem;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 37.4rem;
+            height: 46.2rem;
+        }
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding: 20px 0px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3.2rem;
+    }
+
+}

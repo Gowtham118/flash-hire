@@ -1,0 +1,76 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.interviewersShowcase {
+    padding: 24px 200px;
+    margin-top: 8rem;
+
+
+    &__title {
+        @include bold-text;
+        margin-bottom: 7.2rem;
+        color: var(--color-black);
+
+        text-align: center;
+        margin-bottom: 7.2rem;
+
+        &__blue {
+            color: var(--color-primary);
+        }
+
+    }
+
+    &__companyLogos__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8rem;
+        width: 750px;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+
+        &__logoWrapper {
+            width: 19.2rem;
+            height: 4.8rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        padding: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: $bp-medium) {
+    .interviewersShowcase__companyLogos__parentContainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 3750px;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marqueeContainer 32s linear infinite;
+    }
+
+    @keyframes marqueeContainer {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .marqueeContainer {
+        overflow: hidden;
+    }
+}
