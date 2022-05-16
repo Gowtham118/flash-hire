@@ -1,39 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { db } from "../../../firebase";
+import React from "react";
 
 import flashHireIcon from "../../../assets/icons/flash-hire-icon.png";
+import { WhatsAppOutlined } from "@ant-design/icons";
 
 import styles from "./footer.module.scss";
 
 const Footer = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [companyName, setCompanyName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleContactFormSubmit = (e) => {
-    e.preventDefault();
-    db.collection("contact-form-responses")
-      .add({
-        name,
-        email: email,
-        companyName: companyName,
-        phoneNumber: phoneNumber,
-        message: message,
-      })
-      .then(<Link to="/thankyou" />)
-      .catch((error) => console.error(error));
-
-    setName("");
-    setEmail("");
-    setCompanyName("");
-    setPhoneNumber("");
-    setMessage("");
-  };
-
   return (
     <div id="footer" className={styles.footer}>
       <div className={styles.footer__contacts}>
@@ -45,6 +17,15 @@ const Footer = () => {
               className={styles.footer__contacts__mail}
             >
               mail@flashtech.com
+            </a>
+          </div>
+          <div>
+            <a href="https://api.whatsapp.com/send?phone=8861579281&text=Thanks%20for%20your%20Interest%20in%20Flash%20Hire,%20We'll%20reach%20out%20to%20you%20soon.">
+              <span className={styles.footer__label}>WHATSAPP</span>
+              <span className={styles.footer__contacts__mail}>
+                &nbsp;&nbsp;
+                <WhatsAppOutlined />
+              </span>
             </a>
           </div>
         </div>
@@ -64,74 +45,6 @@ const Footer = () => {
             Collaboration with Flash Hire?
           </div>
         </div>
-        {/* <form
-          onSubmit={handleContactFormSubmit}
-          className={styles.footer__reachout__form}
-        >
-          <div>
-            <label>Full Name</label>
-            <div>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your Full Name"
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <label>Email</label>
-            <div>
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="name@company.com"
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <label>Company Name</label>
-            <div>
-              <input
-                type="text"
-                value={companyName}
-                onChange={(e) => setCompanyName(e.target.value)}
-                placeholder="Enter your Company Name"
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <label>Phone Number</label>
-            <div>
-              <input
-                type="phone-number"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                placeholder="Enter your Phone Number"
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <label>Message </label>
-            <div>
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Please provide a short description of your project"
-              />
-            </div>
-          </div>
-          <div>
-            <button type="submit" className={styles.primaryButton}>
-              Send
-            </button>
-          </div>
-        </form> */}
       </div>
     </div>
   );

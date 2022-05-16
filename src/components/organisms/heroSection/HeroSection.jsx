@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import PrimaryButton from "../../molecules/primaryButton/PrimaryButton";
 
@@ -9,13 +10,8 @@ import flashHireIcon from "../../../assets/icons/flash-hire-icon.png";
 
 import styles from "./heroSection.module.scss";
 
-const HeroSection = () => {
-  const handleStartHiringClick = (e) => {
-    window.location.href = "#footer";
-    e.preventDefault();
-    e.stopPropagation();
-  };
-
+const HeroSection = ({ isEmployer, setIsEmployer }) => {
+  console.log("isEmployer: ", isEmployer);
   return (
     <div id="hero" className={styles.hero}>
       <img
@@ -36,27 +32,34 @@ const HeroSection = () => {
             </a>
           </li>
           {window.innerWidth >= 900 && (
-            <li>
-              <a href="#how-it-works" className={styles.nav__item}>
-                <span>How it works?</span>
-              </a>
-            </li>
-          )}
-          {window.innerWidth >= 900 && (
-            <li>
-              {" "}
-              <a href="#benefits" className={styles.nav__item}>
-                <span>Benefits</span>
-              </a>
-            </li>
-          )}
-          {window.innerWidth >= 900 && (
-            <li className={styles.nav__button}>
-              <PrimaryButton
-                name={"Start Hiring"}
-                onClick={handleStartHiringClick}
-              />
-            </li>
+            <>
+              <li>
+                <a href="#how-it-works" className={styles.nav__item}>
+                  <span>How it works?</span>
+                </a>
+              </li>
+              <li>
+                {" "}
+                <a href="#benefits" className={styles.nav__item}>
+                  <span>Benefits</span>
+                </a>
+              </li>
+              <li onClick={() => setIsEmployer((p) => !p)}>
+                <Link
+                  to={isEmployer ? "/developers" : "/"}
+                  className={styles.nav__item}
+                >
+                  <span>{isEmployer ? "For Developers" : "For Employers"}</span>
+                </Link>
+              </li>
+              <li className={styles.nav__button}>
+                {isEmployer ? (
+                  <PrimaryButton name="Start Hiring" />
+                ) : (
+                  <PrimaryButton name="Register For Free" />
+                )}
+              </li>
+            </>
           )}
         </ul>
       </nav>
@@ -69,17 +72,36 @@ const HeroSection = () => {
               className={styles.hero__content__text__dottedLogo}
             />
           )}
-          <span>
-            Hire vetted&nbsp;
-            <span className={styles.hero__content__text__blue}>
-              engineers&nbsp;
-            </span>
-            <span>from India,available and ready to build your product</span>
-          </span>
-          <PrimaryButton
-            name={"Start Hiring"}
-            onClick={handleStartHiringClick}
-          />
+          {isEmployer ? (
+            <>
+              <span>
+                Hire vetted&nbsp;
+                <span className={styles.hero__content__text__blue}>
+                  engineers&nbsp;
+                </span>
+                <span>
+                  from India,available and ready to build your product
+                </span>
+              </span>
+              <PrimaryButton name="Start Hiring" />
+            </>
+          ) : (
+            <>
+              <div className={styles.normalText}>
+                We help exceptional&nbsp;
+                <span className={styles.normalText__blue}>
+                  designers and developers
+                </span>
+              </div>
+              <span>
+                Get Employed at&nbsp;
+                <span>
+                  Emerging Technology <br /> Companies
+                </span>
+              </span>
+              <PrimaryButton name="Register For Free" />
+            </>
+          )}
         </div>
         <img
           src={heroImage}

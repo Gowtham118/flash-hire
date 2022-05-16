@@ -1,0 +1,173 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+.candidateBenefitsContainer {
+    padding: 24px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    position: relative;
+
+    &__title {
+        @include bold-text;
+        width: 55rem;
+        text-align: center;
+
+        &__blue {
+            color: var(--color-primary);
+        }
+    }
+
+    &__flashDottedIcon {
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+    }
+
+    &__content {
+        display: flex;
+
+        &__iconCardsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 58rem;
+        }
+    }
+
+
+    &__getEmployedCard {
+        width: 104rem;
+        height: 63.2rem;
+        background: #FFECE5;
+        border-radius: 16px;
+        padding-left: 7.2rem;
+        display: flex;
+        margin-top: 22rem;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 11.5rem;
+
+            &__icon {
+                width: 7.8rem;
+                height: 5.4rem;
+            }
+
+            &__title {
+                font-weight: 400;
+                font-size: 4.8rem;
+                line-height: 5.7rem;
+                margin-top: 2.4rem;
+
+                &__bold {
+                    font-weight: 700;
+
+                }
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                margin-top: 1.4rem;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+            }
+        }
+
+        &__image {
+            width: 51rem;
+            height: 63.2rem;
+        }
+
+    }
+
+    &__getPaidCard {
+        width: 104rem;
+        height: 63.2rem;
+        background: #E2F3F3;
+        border-radius: 16px;
+        padding-left: 7.2rem;
+        display: flex;
+        margin-top: 8rem;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 11.5rem;
+
+            &__icon {
+                width: 7.8rem;
+                height: 5.4rem;
+            }
+
+            &__title {
+                font-weight: 400;
+                font-size: 4.8rem;
+                line-height: 5.7rem;
+                margin-top: 2.4rem;
+
+                &__bold {
+                    font-weight: 700;
+
+                }
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                margin-top: 1.4rem;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+
+                &__cards {
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+        &__image {
+            width: 51rem;
+            height: 63.2rem;
+        }
+
+    }
+}
+
+.ant-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+
+.iconCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-top: 4rem;
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        color: #767676;
+        width: 20.1rem;
+    }
+}
+
+.tabIcon {
+    height: 1.6rem;
+    width: 2.3rem
+}
+
+.tabText {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}

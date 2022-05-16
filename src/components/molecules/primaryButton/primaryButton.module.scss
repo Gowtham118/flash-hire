@@ -1,5 +1,12 @@
-@import "../../screens/landingPage/landingPage.scss";
-
 .primaryButton {
-    @include primary-button;
+    padding: 2rem;
+        margin-right: auto;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background: var(--color-primary);
+        color: var(--color-white);
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        cursor: pointer;
 }

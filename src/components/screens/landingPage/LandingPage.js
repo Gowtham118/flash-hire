@@ -6,10 +6,10 @@ import BenefitsSection from "../../organisms/benefitsSection/BenefitsSection";
 import InterviewersShowcase from "../../organisms/interviewersShowcase/InterviewersShowcase";
 import Footer from "../../organisms/footer/Footer";
 
-const LandingPage = () => {
+const LandingPage = ({ isEmployer, setIsEmployer }) => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection isEmployer={isEmployer} setIsEmployer={setIsEmployer} />
 
       <HowItWorksSection />
 

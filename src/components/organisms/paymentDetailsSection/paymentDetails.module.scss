@@ -1,0 +1,178 @@
+@import "../../screens/landingPage/landingPage.scss";
+
+@mixin normaltext {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.paymentDetailsContainer {
+    padding: 24px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    margin-top: 14rem;
+
+    &__title {
+        @include bold-text;
+        width: 55rem;
+        text-align: center;
+
+        &__blue {
+            color: var(--color-primary);
+        }
+    }
+
+    &__normalText {
+        @include normaltext;
+    }
+
+    &__normalTextSmaller {
+        @include normaltext;
+        font-size: 1.6rem;
+        width: 48rem;
+        text-align: center;
+        margin-top: 3.2rem;
+    }
+
+    &__compensationDetailsContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 4.8rem;
+    }
+
+    &__cardsContainer {
+        margin-top: 16rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+
+        &__card1,
+        &__card2,
+        &__card3 {
+            display: flex;
+            background: #E2F3F3;
+            border-radius: 16px;
+            padding-right: 4rem;
+
+            &__image {
+                width: 51rem;
+                height: 63.2rem;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.4rem;
+
+                &__icon {
+                    width: 7.8rem;
+                    height: 5.4rem;
+                }
+
+                &__text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                }
+
+                &__title {
+                    font-weight: 400;
+                    font-size: 4.8rem;
+                    line-height: 5.7rem;
+
+                    &__bold {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        &__card2,
+        &__card3 {
+            flex-direction: column;
+            background: #FAEDDB;
+            padding-right: 0;
+            padding-top: 1.6rem;
+            height: 63.8rem;
+            gap: 8rem;
+
+            &__image {
+                width: 104rem;
+                height: 32rem;
+            }
+
+            &__content {
+                flex-direction: row;
+                gap: 1.6rem;
+                margin-left: 5.6rem;
+                justify-content: flex-start;
+
+                &__title {
+                    width: 30rem;
+                }
+
+                &__text {
+                    width: 33.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+
+        &__card3 {
+            background: #FFE1D6;
+
+            &__content {
+                &__text {
+                    width: 30rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+.compensationDetailsCardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 5.5rem;
+    width: 33.4rem;
+    height: 42rem;
+
+    &:last-child {
+        .compensationDetailsCardContainer__title {
+            width: 28rem;
+            transform: translateX(-3rem);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+
+        &__text {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.9rem;
+            margin-top: 0.5rem;
+
+        }
+    }
+
+
+    &__image {
+        width: 32rem;
+        height: 26rem;
+    }
+
+}

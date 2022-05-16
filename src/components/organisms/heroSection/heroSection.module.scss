@@ -121,7 +121,17 @@
     }
 
     a:hover {
-        color: var(--color-black);
+        color: #767676;
     }
+}
 
+.normalText {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #767676;
+
+    &__blue {
+            color: var(--color-primary);
+        }
 }

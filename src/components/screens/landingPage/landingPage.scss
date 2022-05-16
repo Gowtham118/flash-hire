@@ -15,17 +15,3 @@ $bp-smallest: 31.25em; // 500px
         line-height: 4.4rem;
     }
 }
-
-@mixin primary-button {
-    width: 120px;
-    height: 40px;
-    padding: 0px 20px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    background: var(--color-primary);
-    color: var(--color-white);
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    cursor: pointer;
-}
