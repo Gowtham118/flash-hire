@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+Website : https://flash-hire.co/
+
+Hello fellow dev, this project has CI/CD implemented using Github actions.
+
+If you are to deploy a new feature to production. Please follow these steps.
+  1. Raise a PR from your branch to the `main` branch ✋
+  2. Don't merge the PR immediately. 🚫 
+  3. Wait till Github actions completes all the checks and gives you a preview link. ⌚
+  4. Go to the  preview link and check for your desired changes . ✅
+  5. If everything checks up, Merge the Pull request. ✌
+  6. Now sit back and relax as github does it's work to deploy new build to production. 😎
+  
+  Happy Hacking!!!🙌
+
 ## Available Scripts
 
 In the project directory, you can run:
