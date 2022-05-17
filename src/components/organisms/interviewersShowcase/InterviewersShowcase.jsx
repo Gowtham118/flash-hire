@@ -1,13 +1,16 @@
 import React from "react";
 
 import { companyLogos } from "../../../helpers/importCompanyLogos.helper";
+import { companyLogosMobile } from "../../../helpers/importCompanyLogosMobile.helper";
 
 import styles from "./interviewersShowcase.module.scss";
 
 const InterviewersShowcase = () => {
   const renderCompanyLogos = () => (
     <div className={styles.interviewersShowcase__companyLogos__container}>
-      {Object.values(companyLogos).map((item, index) => (
+      {Object.values(
+        window.innerWidth > 900 ? companyLogos : companyLogosMobile
+      ).map((item, index) => (
         <div
           className={
             styles.interviewersShowcase__companyLogos__container__logoWrapper

@@ -6,9 +6,11 @@ import InterviewersShowcase from "../../organisms/interviewersShowcase/Interview
 import Footer from "../../organisms/footer/Footer";
 import PlanToActionBanner from "../../organisms/planToActionBanner/PlanToActionBanner";
 
+import styles from "./developersPage.module.scss";
+
 const DevelopersPage = ({ isEmployer, setIsEmployer }) => {
   return (
-    <div>
+    <div className={styles.developersPage_container}>
       <HeroSection isEmployer={isEmployer} setIsEmployer={setIsEmployer} />
       <CandidateBenefits />
       <PaymentDetails />

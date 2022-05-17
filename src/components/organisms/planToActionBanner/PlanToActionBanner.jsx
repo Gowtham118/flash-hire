@@ -1,5 +1,7 @@
 import React from "react";
 
+import PrimaryButton from "../../molecules/primaryButton/PrimaryButton";
+
 import styles from "./planToActionBanner.module.scss";
 
 const PlanToActionBanner = () => {
@@ -18,7 +20,10 @@ const PlanToActionBanner = () => {
         <div className={styles.plantoActionBannerContainer__card__body}>
           Click below to register with us and join our community.
         </div>
-        {/* <PrimaryButton/> */}
+        <div style={{marginLeft:"1rem"}}>
+
+        <PrimaryButton name="Register For Free" />
+        </div>
       </div>
     </div>
   );

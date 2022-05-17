@@ -11,7 +11,9 @@ import flashHireIcon from "../../../assets/icons/flash-hire-icon.png";
 import styles from "./heroSection.module.scss";
 
 const HeroSection = ({ isEmployer, setIsEmployer }) => {
-  console.log("isEmployer: ", isEmployer);
+  
+  const isPcScreen = window.innerWidth >=900;
+
   return (
     <div id="hero" className={styles.hero}>
       <img
@@ -31,7 +33,7 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
               <span className={styles.nav__header}>Flash Hire</span>
             </a>
           </li>
-          {window.innerWidth >= 900 && (
+          {isPcScreen && (
             <>
               <li>
                 <a href="#how-it-works" className={styles.nav__item}>
@@ -44,28 +46,28 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
                   <span>Benefits</span>
                 </a>
               </li>
-              <li onClick={() => setIsEmployer((p) => !p)}>
-                <Link
-                  to={isEmployer ? "/developers" : "/"}
-                  className={styles.nav__item}
-                >
-                  <span>{isEmployer ? "For Developers" : "For Employers"}</span>
-                </Link>
-              </li>
-              <li className={styles.nav__button}>
-                {isEmployer ? (
-                  <PrimaryButton name="Start Hiring" />
-                ) : (
-                  <PrimaryButton name="Register For Free" />
-                )}
-              </li>
             </>
           )}
+          <li onClick={() => setIsEmployer((p) => !p)}>
+            <Link
+              to={isEmployer ? "/developers" : "/"}
+              className={styles.nav__item}
+            >
+              <span>{isEmployer ? "For Developers" : "For Employers"}</span>
+            </Link>
+          </li>
+         { window.innerWidth>=900 && <li className={styles.nav__button}>
+            {isEmployer ? (
+              <PrimaryButton name="Start Hiring" />
+            ) : (
+              <PrimaryButton name="Register For Free" />
+            )}
+          </li>}
         </ul>
       </nav>
       <div className={styles.hero__content}>
         <div className={styles.hero__content__text}>
-          {window.innerWidth >= 900 && (
+          {isPcScreen && (
             <img
               src={dottedLogo}
               alt="dottedLogo"

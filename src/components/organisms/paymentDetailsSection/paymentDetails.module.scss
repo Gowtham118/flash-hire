@@ -15,6 +15,11 @@
     background-color: #E5E5E5;
     margin-top: 14rem;
 
+    @media screen and (max-width: $bp-medium) {
+        padding: 24px 40px;
+        margin-top: 50px;
+    }
+
     &__title {
         @include bold-text;
         width: 55rem;
@@ -27,6 +32,10 @@
 
     &__normalText {
         @include normaltext;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 150px;
+        }
     }
 
     &__normalTextSmaller {
@@ -42,6 +51,10 @@
         justify-content: space-between;
         gap: 2rem;
         margin-top: 4.8rem;
+
+        @media screen and (max-width: $bp-medium) {
+            flex-direction: column;
+        }
     }
 
     &__cardsContainer {
@@ -49,6 +62,11 @@
         display: flex;
         flex-direction: column;
         gap: 8rem;
+
+        @media screen and (max-width: $bp-medium) {
+            margin-top: 50px;
+            justify-content: space-between;
+        }
 
         &__card1,
         &__card2,
@@ -58,9 +76,20 @@
             border-radius: 16px;
             padding-right: 4rem;
 
+            @media screen and (max-width: $bp-medium) {
+                padding: 40px 24px;
+                flex-direction: column-reverse;
+                width: 37.4rem;
+            }
+
             &__image {
                 width: 51rem;
                 height: 63.2rem;
+
+                @media screen and (max-width: $bp-medium) {
+                    width: 34rem;
+                    height: 37.4rem;
+                }
             }
 
             &__content {
@@ -104,9 +133,21 @@
             height: 63.8rem;
             gap: 8rem;
 
+            @media screen and (max-width: $bp-medium) {
+                padding: 40px 24px;
+                flex-direction: column-reverse;
+                width: 37.4rem;
+                height: auto;
+            }
+
             &__image {
                 width: 104rem;
                 height: 32rem;
+
+                @media screen and (max-width: $bp-medium) {
+                    width: 37.4rem;
+                    height: 37.4rem;
+                }
             }
 
             &__content {
@@ -114,6 +155,12 @@
                 gap: 1.6rem;
                 margin-left: 5.6rem;
                 justify-content: flex-start;
+
+                @media screen and (max-width: $bp-medium) {
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    margin-left: 0;
+                }
 
                 &__title {
                     width: 30rem;
@@ -134,6 +181,12 @@
                     width: 30rem;
                     display: flex;
                     flex-wrap: wrap;
+
+                    @media screen and (max-width: $bp-medium) {
+                        width: 90%;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                    }
                 }
             }
         }
@@ -143,6 +196,8 @@
 .compensationDetailsCardContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 4rem 5.5rem;
     width: 33.4rem;
     height: 42rem;

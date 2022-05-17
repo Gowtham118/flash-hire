@@ -3,9 +3,12 @@ import React from "react";
 import { compensationCardData } from "../../../data/compensationCards";
 
 import shakeHandIcon from "../../../assets/icons/handshake-icon.png";
-import womanHoldingPlant from "../../../assets/images//candidate-benefits/woman-holding-plant.png";
-import manClimbingStairs from "../../../assets/images//candidate-benefits/experience.png";
-import clients from "../../../assets/images//candidate-benefits/clients.png";
+import womanHoldingPlant from "../../../assets/images/candidate-benefits/woman-holding-plant.png";
+import womanHoldingPlantMobile from "../../../assets/images/candidate-benefits/woman-holding-plant-mobile.png";
+import manClimbingStairs from "../../../assets/images/candidate-benefits/experience.png";
+import clients from "../../../assets/images/candidate-benefits/clients.png";
+import manClimbingStairsMobile from "../../../assets/images/candidate-benefits/experience-mobile.png";
+import hiking from "../../../assets/images/candidate-benefits/hiking.png";
 
 import styles from "./paymentDetails.module.scss";
 
@@ -39,6 +42,8 @@ const CompensationDetailsCard = ({
 );
 
 const PaymentDetails = () => {
+  const isMobileScreen = window.innerWidth < 900;
+
   return (
     <div className={styles.paymentDetailsContainer}>
       <div className={styles.paymentDetailsContainer__title}>
@@ -64,7 +69,7 @@ const PaymentDetails = () => {
       <div className={styles.paymentDetailsContainer__cardsContainer}>
         <div className={styles.paymentDetailsContainer__cardsContainer__card1}>
           <img
-            src={womanHoldingPlant}
+            src={isMobileScreen ? womanHoldingPlantMobile : womanHoldingPlant}
             alt="womanHoldingPlantImage"
             className={
               styles.paymentDetailsContainer__cardsContainer__card1__image
@@ -115,7 +120,7 @@ const PaymentDetails = () => {
         </div>
         <div className={styles.paymentDetailsContainer__cardsContainer__card2}>
           <img
-            src={manClimbingStairs}
+            src={isMobileScreen ? manClimbingStairsMobile : manClimbingStairs}
             alt="manClimbingStairsImage"
             className={
               styles.paymentDetailsContainer__cardsContainer__card2__image
@@ -156,7 +161,7 @@ const PaymentDetails = () => {
         </div>
         <div className={styles.paymentDetailsContainer__cardsContainer__card3}>
           <img
-            src={clients}
+            src={isMobileScreen ? hiking : clients}
             alt="internationalClientsImage"
             className={
               styles.paymentDetailsContainer__cardsContainer__card3__image
@@ -198,6 +203,9 @@ const PaymentDetails = () => {
                 your job search and land your dream job.
               </p>
             </div>
+            {/* {isMobileScreen && <img src={hiking} alt="hikingImage"   className={
+                styles.paymentDetailsContainer__cardsContainer__card3__image
+              } />} */}
           </div>
         </div>
       </div>

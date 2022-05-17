@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -7,6 +7,9 @@ import LandingPage from "./components/screens/landingPage/LandingPage";
 
 function App() {
   const [isEmployer, setIsEmployer] = useState(true);
+  useEffect(() => {
+    if (window.location.pathname === "/developers") setIsEmployer(false);
+  }, []);
   return (
     <div className="App">
       <Routes>

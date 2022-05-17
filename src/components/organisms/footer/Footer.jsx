@@ -9,25 +9,23 @@ const Footer = () => {
   return (
     <div id="footer" className={styles.footer}>
       <div className={styles.footer__contacts}>
+        <span className={styles.footer__label}>CONTACTS</span>
         <div>
-          <span className={styles.footer__label}>CONTACTS</span>
-          <div>
-            <a
-              href="mailto:mail@flashtech.com"
-              className={styles.footer__contacts__mail}
-            >
-              mail@flashtech.com
-            </a>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send?phone=8861579281&text=Thanks%20for%20your%20Interest%20in%20Flash%20Hire,%20We'll%20reach%20out%20to%20you%20soon.">
-              <span className={styles.footer__label}>WHATSAPP</span>
-              <span className={styles.footer__contacts__mail}>
-                &nbsp;&nbsp;
-                <WhatsAppOutlined />
-              </span>
-            </a>
-          </div>
+          <a
+            href="mailto:mail@flashtech.com"
+            className={styles.footer__contacts__mail}
+          >
+            mail@flashtech.com
+          </a>
+        </div>
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=8861579281&text=Thanks%20for%20your%20Interest%20in%20Flash%20Hire,%20We'll%20reach%20out%20to%20you%20soon.">
+            <span className={styles.footer__label}>WHATSAPP</span>
+            <span className={styles.footer__contacts__mail}>
+              &nbsp;&nbsp;
+              <WhatsAppOutlined />
+            </span>
+          </a>
         </div>
         <a href="#hero" className={styles.footer__logo}>
           <img

@@ -9,10 +9,19 @@
     background-color: #E5E5E5;
     position: relative;
 
+    @media screen and (max-width: $bp-medium) {
+        padding: 0px 20px;
+        margin-top: 4rem;
+    }
+
     &__title {
         @include bold-text;
         width: 55rem;
         text-align: center;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 100%;
+        }
 
         &__blue {
             color: var(--color-primary);
@@ -32,6 +41,11 @@
             display: flex;
             flex-wrap: wrap;
             width: 58rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
     }
 
@@ -45,10 +59,22 @@
         display: flex;
         margin-top: 22rem;
 
+        @media screen and (max-width: $bp-medium) {
+            width: 100%;
+            margin-top: 5rem;
+            flex-direction: column;
+            height: auto;
+            padding: 40px 24px;
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
             margin-top: 11.5rem;
+
+            @media screen and (max-width: $bp-medium) {
+                margin-top: 0;
+            }
 
             &__icon {
                 width: 7.8rem;
@@ -81,23 +107,40 @@
         &__image {
             width: 51rem;
             height: 63.2rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 37.4rem;
+                height: 34.2rem;
+            }
         }
 
     }
 
     &__getPaidCard {
+        display: flex;
         width: 104rem;
         height: 63.2rem;
         background: #E2F3F3;
         border-radius: 16px;
         padding-left: 7.2rem;
-        display: flex;
         margin-top: 8rem;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 100%;
+            margin-top: 5rem;
+            flex-direction: column-reverse;
+            height: auto;
+            padding: 40px 24px;
+        }
 
         &__content {
             display: flex;
             flex-direction: column;
             margin-top: 11.5rem;
+
+            @media screen and (max-width: $bp-medium) {
+                margin-top: 0;
+            }
 
             &__icon {
                 width: 7.8rem;
@@ -135,12 +178,17 @@
         &__image {
             width: 51rem;
             height: 63.2rem;
+
+            @media screen and (max-width: $bp-medium) {
+                width: 37.4rem;
+                height: 34.2rem;
+            }
         }
 
     }
 }
 
-.ant-tabs {
+.ant-tabs-nav-list {
     display: flex !important;
     flex-wrap: nowrap !important;
 }
@@ -158,6 +206,21 @@
         line-height: 2.6rem;
         color: #767676;
         width: 20.1rem;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 104px;
+        }
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        width: 144px;
+    }
+
+    &__icon {
+        @media screen and (max-width: $bp-medium) {
+            width: 32px;
+            height: 32px;
+        }
     }
 }
 
