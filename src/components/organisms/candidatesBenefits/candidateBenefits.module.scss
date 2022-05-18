@@ -196,7 +196,7 @@
 .iconCardContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.6rem;
     margin-top: 4rem;
 
@@ -206,14 +206,10 @@
         line-height: 2.6rem;
         color: #767676;
         width: 20.1rem;
-
-        @media screen and (max-width: $bp-medium) {
-            width: 104px;
-        }
     }
 
     @media screen and (max-width: $bp-medium) {
-        width: 144px;
+        width: 190px;
     }
 
     &__icon {
