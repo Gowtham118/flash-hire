@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import PrimaryButton from "../../molecules/primaryButton/PrimaryButton";
@@ -24,7 +24,7 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#" className={styles.nav__logo}>
+            <a href="/" className={styles.nav__logo}>
               <img
                 src={flashHireIcon}
                 alt="flashHireIcon"
