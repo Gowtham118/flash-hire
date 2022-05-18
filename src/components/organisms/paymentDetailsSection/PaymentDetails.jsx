@@ -203,9 +203,6 @@ const PaymentDetails = () => {
                 your job search and land your dream job.
               </p>
             </div>
-            {/* {isMobileScreen && <img src={hiking} alt="hikingImage"   className={
-                styles.paymentDetailsContainer__cardsContainer__card3__image
-              } />} */}
           </div>
         </div>
       </div>

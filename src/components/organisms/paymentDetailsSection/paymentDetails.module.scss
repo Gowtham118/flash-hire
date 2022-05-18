@@ -136,6 +136,8 @@
             @media screen and (max-width: $bp-medium) {
                 padding: 40px 24px;
                 flex-direction: column-reverse;
+                justify-content: space-between;
+                gap: 12rem;
                 width: 37.4rem;
                 height: auto;
             }
@@ -159,6 +161,7 @@
                 @media screen and (max-width: $bp-medium) {
                     flex-direction: column;
                     flex-wrap: wrap;
+                    height: auto;
                     margin-left: 0;
                 }
 
@@ -175,6 +178,10 @@
 
         &__card3 {
             background: #FFE1D6;
+            
+            @media screen and (max-width: $bp-medium) {
+                gap: 2rem;
+            }
 
             &__content {
                 &__text {
@@ -184,6 +191,7 @@
 
                     @media screen and (max-width: $bp-medium) {
                         width: 90%;
+                        height: auto;
                         flex-direction: column;
                         flex-wrap: nowrap;
                     }
