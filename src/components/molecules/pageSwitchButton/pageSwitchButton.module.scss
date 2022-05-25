@@ -1,13 +1,13 @@
-.primaryButton {
+.pageSwitchButton {
     padding: 2rem;
     margin-right: auto;
     border: none;
     border-radius: 8px;
     outline: none;
-    background: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-primary);
+    background: #E5E5E5;
     font-size: 1.4rem;
     line-height: 2.4rem;
-    font-weight: 700;
     cursor: pointer;
+    font-weight: 700;
 }

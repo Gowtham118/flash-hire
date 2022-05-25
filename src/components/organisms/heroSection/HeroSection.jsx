@@ -9,10 +9,10 @@ import heroBackgroundImage from "../../../assets/images/hero-background-image.pn
 import flashHireIcon from "../../../assets/icons/flash-hire-icon.png";
 
 import styles from "./heroSection.module.scss";
+import PageSwitchButton from "../../molecules/pageSwitchButton/PageSwitchButton";
 
 const HeroSection = ({ isEmployer, setIsEmployer }) => {
-  
-  const isPcScreen = window.innerWidth >=900;
+  const isPcScreen = window.innerWidth >= 900;
 
   return (
     <div id="hero" className={styles.hero}>
@@ -48,21 +48,16 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
               </li>
             </>
           )}
-          <li onClick={() => setIsEmployer((p) => !p)}>
-            <Link
-              to={isEmployer ? "/developers" : "/"}
-              className={styles.nav__item}
-            >
-              <span>{isEmployer ? "For Developers" : "For Employers"}</span>
+          <li
+            onClick={() => setIsEmployer((p) => !p)}
+            className={styles.nav__button}
+          >
+            <Link to={isEmployer ? "/developers" : "/"}>
+              <PageSwitchButton
+                name={isEmployer ? "For Developers" : "For Employers"}
+              />
             </Link>
           </li>
-         { window.innerWidth>=900 && <li className={styles.nav__button}>
-            {isEmployer ? (
-              <PrimaryButton name="Start Hiring" />
-            ) : (
-              <PrimaryButton name="Register For Free" />
-            )}
-          </li>}
         </ul>
       </nav>
       <div className={styles.hero__content}>
@@ -77,7 +72,7 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
           {isEmployer ? (
             <>
               <span>
-                Hire vetted&nbsp;
+                Hire&nbsp;vetted&nbsp;
                 <span className={styles.hero__content__text__blue}>
                   engineers&nbsp;
                 </span>
@@ -98,7 +93,7 @@ const HeroSection = ({ isEmployer, setIsEmployer }) => {
               <span>
                 Get Employed at&nbsp;
                 <span>
-                  Emerging Technology <br /> Companies
+                  Emerging Technology Companies
                 </span>
               </span>
               <PrimaryButton name="Register For Free" />

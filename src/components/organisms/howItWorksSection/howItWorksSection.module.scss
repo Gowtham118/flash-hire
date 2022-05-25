@@ -2,7 +2,6 @@
 
 .how_it_works {
     padding: 24px 200px;
-    margin-top: 10rem;
 
     &__title {
 
@@ -39,10 +38,6 @@
             margin-top: -4rem;
             margin-right: 8rem;
         }
-    }
-
-    @media screen and (max-width: $bp-largest) {
-        margin-top: 10rem;
     }
 
     @media screen and (max-width: $bp-medium) {
